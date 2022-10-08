@@ -18,7 +18,7 @@ const columns = [
       return (
         <div>
           <Link
-            to={`/update-vehicle/${cellValues.row.id}`}
+            to={`/update-employee/${cellValues.row.id}`}
             style={{ textDecoration: "none" }}
           >
             <Button variant="contained" color="primary">

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AddEmployee from './main/crud-files/AddEmployee';
 import Header from './main/Header';
 import ErrorPage from './main/ErrorPage';
@@ -11,9 +11,10 @@ function App() {
     <Router>
       <Header/>
       <Routes>
+        <Route path="/" element={ <Navigate to="/Register" /> } />
         <Route path="/Register" element={<AddEmployee/>}/>
         <Route path="/All" element={<EmployeeList/>}/>
-        <Route path="/update-vehicle/:id" element={<UpdateEmployee/>}/>
+        <Route path="/update-employee/:id" element={<UpdateEmployee/>}/>
         <Route path="*" element={<ErrorPage/>}/>
       </Routes>
     </Router>
